@@ -10,3 +10,8 @@ gem 'sinatra'
 group :development, :test do
   gem 'rerun'
 end
+
+group :test do
+  gem 'rack-test'
+  gem 'rspec'
+end
