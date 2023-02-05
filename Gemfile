@@ -6,3 +6,7 @@ ruby '3.2.0'
 
 gem 'puma'
 gem 'sinatra'
+
+group :development, :test do
+  gem 'rerun'
+end
