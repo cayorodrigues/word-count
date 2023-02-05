@@ -36,7 +36,7 @@ RSpec.describe 'Word Count' do
       end
 
       it 'renders an error message' do
-        expect(subject.body).to have_tag(:p, text: 'Some input text is required')
+        expect(subject.body).to have_tag(:div, text: 'Some input text is required')
       end
     end
 

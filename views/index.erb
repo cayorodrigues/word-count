@@ -1,8 +1,6 @@
-<h1>World Count</h1>
+<h1 class="text-center mt-5 mb-5">Word Count</h1>
 <form action="count" method="post">
-    <textarea name="text" id="text" cols="30" rows="10"></textarea>
-    <% if @error %>
-        <p style="color: red;"><%= @error %></p>
-    <% end %>
-    <button type="submit">Count!</button>
+    <textarea name="text" id="text" class="form-control <% if @error %>is-invalid<% end %>" placeholder="Type your text here" aria-describedby="validationFeedback"></textarea>
+    <div id="validationFeedback" class="invalid-feedback"><%= @error %></div>
+    <button class="btn btn-primary mt-3" type="submit">Submit</button>
 </form>
