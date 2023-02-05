@@ -5,6 +5,8 @@ ENV['APP_ENV'] = 'test'
 require './app'
 require 'rspec'
 require 'rack/test'
+require 'rspec-html-matchers'
+require 'faker'
 
 def app
   Sinatra::Application
@@ -27,6 +29,7 @@ end
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+  config.include RSpecHtmlMatchers
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

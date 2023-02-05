@@ -12,6 +12,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'faker'
   gem 'rack-test'
   gem 'rspec'
+  gem 'rspec-html-matchers'
 end
